@@ -37,5 +37,21 @@ export class AppComponent {
       laundry: false,
     }
   ];
+
+  detailResults: HousingLocation[] = [];
   
+  displayDetails(detailLocationName: string) {
+    // filter housingLocationList results by name of location
+    // check if any of the items' names in the list match detailLocationName
+    if (!detailLocationName) return;
+    this.detailResults = this.housingLocationList.filter(
+      (location: HousingLocation) => location.name
+      .toLowerCase()
+      .includes(
+        detailLocationName.toLowerCase()
+      ));    
+    // this.detailName = this.housingLocationList.find(locationObj => detailLocationName === locationObj.name)
+    
+    console.log(this.detailResults)
+  }
 }
