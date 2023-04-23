@@ -2,7 +2,8 @@
 <input id="location-search" placeholder="Ex: Chicago" #search>
 <button (click)="searchHousingLocations(search.value)">Search</button>
 <article *ngFor="let location of results">
-    <p (click)="getDetails(location.name)">{{location.name}}</p>
+    <p (click)="showDetails()">{{location.name}}</p>
+    <app-details-panel *ngIf="showDetails" [toggleDetails]="detailsData"></app-details-panel>
     <!-- <p>{{location.city}}</p>
     <p>Wifi? {{location.wifi}}</p> -->
 </article>

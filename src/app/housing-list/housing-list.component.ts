@@ -25,11 +25,5 @@ export class HousingListComponent implements OnInit {
       .includes(
         searchText.toLowerCase()
       ));
-  }
-
-  getDetails(locationName: string) {
-    console.log(locationName);
-    this.clickedLocation.emit(locationName);
-  }
-
+    }
 }
