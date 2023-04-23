@@ -24,6 +24,16 @@ export class HousingListComponent implements OnInit {
       .includes(
         searchText.toLowerCase()
       ));
-  }
+    }
+
+    showDetails() {
+      console.log('showDetails()')
+      let x: any = document.getElementById("details-panel");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    };
 
 }

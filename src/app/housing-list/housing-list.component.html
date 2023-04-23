@@ -2,7 +2,11 @@
 <input id="location-search" placeholder="Ex: Chicago" #search>
 <button (click)="searchHousingLocations(search.value)">Search</button>
 <article *ngFor="let location of results">
-    <p>{{location.name}}</p>
-    <p>{{location.city}}</p>
-    <p>Wifi? {{location.wifi}}</p>
+    <p (click)="showDetails()">{{location.name}}</p>
+    <app-details-panel *ngIf="showDetails" [toggleDetails]="detailsData"></app-details-panel>
+    <app-details-panel class="details-panel" *ngIf="showDetails"></app-details-panel>
+    <!-- <p>{{location.city}}</p>
+    <p>Wifi? {{location.wifi}}</p> -->
 </article>
+
+<!-- current approach: https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp -->
