@@ -10,7 +10,7 @@ export class HousingListComponent implements OnInit {
 
   @Input() locationList: HousingLocation[] = [];
   results: HousingLocation[] = [];
-  @Output() clickedLocation = new EventEmitter<string>();
+  showDetails: boolean = false;
 
   constructor() { }
 
@@ -26,4 +26,9 @@ export class HousingListComponent implements OnInit {
         searchText.toLowerCase()
       ));
     }
+
+  if (showDetails: boolean) {
+    console.log(`showDetails triggered in housing-list.component.ts: ${showDetails}`)
+    // activate displayDetails() in details-panel
+  }
 }

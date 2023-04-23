@@ -1,14 +1,7 @@
 <main>
     <header><img src="../assets/logo.svg" alt="fairhouse">Fairhouse</header>
     <section>
-        <app-housing-list [locationList]="housingLocationList" (clickedLocation)="displayDetails($event)"></app-housing-list>
+        <app-housing-list [locationList]="housingLocationList"></app-housing-list>
     </section>
-    <article *ngFor="let details of detailResults">
-        <p>in {{ details.city }} ({{ details.state }})</p>
-        <p>available units: {{ details.availableUnits }}</p>
-        <p>has wifi? -> {{ details.wifi }}</p>
-        <p>has laundry? -> {{ details.laundry }}</p>
-        <img src="{{ details.photo }}" alt="{{ details.city }}-photo">
-    </article>
   </main>
   
