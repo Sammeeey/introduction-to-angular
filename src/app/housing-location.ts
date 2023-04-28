@@ -1,5 +1,5 @@
 export interface HousingLocation {
-    name: string,
+    name: string | undefined,
     city: string,
     state: string,
     photo: string,

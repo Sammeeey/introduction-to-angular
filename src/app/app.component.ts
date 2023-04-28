@@ -28,8 +28,17 @@ export class AppComponent {
       laundry: true,
     },
     {
-      name: "Warm Beds Housing Support",
+      name: undefined,
       city: "Juneau",
+      state: "AK",
+      photo: "../assets/housing-3.jpg",
+      availableUnits: 1,
+      wifi: false,
+      laundry: false,
+    },
+    {
+      name: undefined,
+      city: "und",
       state: "AK",
       photo: "../assets/housing-3.jpg",
       availableUnits: 1,
