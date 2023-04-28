@@ -37,5 +37,10 @@ export class AppComponent {
       laundry: false,
     }
   ];
+
+displayDetails(location: HousingLocation) {
+  console.log(location)
+  
+}
   
 }
