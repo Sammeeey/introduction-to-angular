@@ -1,8 +1,8 @@
 <label for="location-search">Search for a new place</label>
 <input id="location-search" placeholder="Ex: Chicago" #search>
 <button (click)="searchHousingLocations(search.value)">Search</button>
-<article *ngFor="let location of results">
+<article (click)="displayDetails()" *ngFor="let location of results">
     <p>{{location.name}}</p>
-    <p>{{location.city}}</p>
-    <p>Wifi? {{location.wifi}}</p>
+    <p class="detail" [ngClass]="displayStatus ? 'display' : 'no-display'">{{location.city}}</p>
+    <p class="detail" [ngClass]="displayStatus ? 'display' : 'no-display'">Wifi? {{location.wifi}}</p>
 </article>
